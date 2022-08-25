@@ -64,6 +64,7 @@ return packer.startup(function(use)
   -- Color schemes
   --use "lunarvim/colorschemes"
   use "lunarvim/darkplus.nvim"
+  use "marko-cerovac/material.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -107,6 +108,10 @@ return packer.startup(function(use)
         require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
   }
+
+  -- WhichKey
+  use("folke/which-key.nvim")
+
   -- Trouble - show problems in your code
     use({
       "folke/trouble.nvim",
