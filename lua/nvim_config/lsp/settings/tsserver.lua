@@ -20,4 +20,4 @@ return {
         or util.root_pattern('package.json', 'jsconfig.json', '.git')(fname)
     end,
   },
-  }
+}

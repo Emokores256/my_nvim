@@ -59,6 +59,20 @@ require("formatter").setup({
 				}
 			end,
 		},
+    php = {
+      function ()
+        return {
+          exe = 'php-cs-fixer',
+          args = {
+              '--rules=@Symfony',
+              '--using-cache=no',
+              '--no-interaction',
+              'fix'
+          },
+          stdin = false,
+        }
+      end
+    },
 		rust = {
 			function()
 				return {
@@ -101,6 +115,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 		"*.go",
 		"*.rs",
 		"*.astro",
+    "*.php",
 	},
 	command = "FormatWrite",
 })
