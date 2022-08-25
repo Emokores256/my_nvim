@@ -3,9 +3,6 @@ local util = require 'lspconfig.util'
 local bin_name = 'tailwindcss-language-server'
 local cmd = { bin_name, '--stdio' }
 
-if vim.fn.has 'win32' == 1 then
-  cmd = { 'cmd.exe', '/C', bin_name, '--stdio' }
-end
 
 return {
   default_config = {
@@ -110,9 +107,4 @@ return {
         or util.find_git_ancestor(fname)
     end,
   },
-  docs = {
-      default_config = {
-      root_dir = [[root_pattern('tailwind.config.js', 'tailwind.config.ts', 'postcss.config.js', 'postcss.config.ts', 'package.json', 'node_modules', '.git')]],
-    },
-  },
-}
+ }

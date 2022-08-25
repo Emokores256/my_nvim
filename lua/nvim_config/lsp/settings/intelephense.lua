@@ -14,25 +14,18 @@ return {
       -- prefer cwd if root is a descendant
       return util.path.is_descendant(cwd, root) and cwd or root
     end,
-  },
-  docs = {
-      default_config = {
-      root_dir = root,
-      init_options = {
-        -- storagePath = Optional absolute path to storage dir. Defaults to os.tmpdir().
-        -- globalStoragePath = Optional absolute path to a global storage dir. Defaults to os.homedir().
-        licenceKey = "~/intelephense/license.txt",
-        -- clearCache = Optional flag to clear server state. State can also be cleared by deleting {storagePath}/intelephense
-        -- See https://github.com/bmewburn/intelephense-docs/blob/master/installation.md#initialisation-options
-      },
-      settings = {
-        intelephense = {
-          files = {
-            maxSize = 10000000;
-          };
-        };
-        -- See https://github.com/bmewburn/intelephense-docs
-      },
+    init_options = {
+      globalStoragePath = "/usr/bin/intelephense",
+      licenseKey = "~/intelephense/license.txt"
     },
+    settings = {
+      intelephense = {
+        files = {
+          maxSize = 10000000;
+        };
+      };
+        -- See https://github.com/bmewburn/intelephense-docs
+    },
+
   },
 }
