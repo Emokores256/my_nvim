@@ -162,6 +162,11 @@ _G.packer_plugins = {
     path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
+  },
   ["nlsp-settings.nvim"] = {
     loaded = true,
     path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",
@@ -302,6 +307,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/vim-matchtag",
     url = "https://github.com/leafOfTree/vim-matchtag"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
