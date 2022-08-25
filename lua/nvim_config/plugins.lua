@@ -46,6 +46,8 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use {'tpope/vim-dispatch', opt = true, cmd = {'Dispatch', 'Make', 'Focus', 'Start'} }
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use("windwp/nvim-ts-autotag") -- auto close and rename tags
+  use("windwp/nvim-spectre") -- Spectre for find and replace
   use "numToStr/Comment.nvim" -- Easily comment out stuff
   use {
     'kyazdani42/nvim-tree.lua',
@@ -75,6 +77,70 @@ return packer.startup(function(use)
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
+  -- hightlight matching tag in html,jsx etc.
+  use("leafOfTree/vim-matchtag")
+  use({
+      "phaazon/hop.nvim",
+      as = "hop",
+      config = function()
+        require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+      end,
+    })
+
+   -- Todo comments
+    use({
+      "folke/todo-comments.nvim",
+      requires = "nvim-lua/plenary.nvim",
+      config = function()
+        require("todo-comments").setup({})
+      end,
+    })
+
+  -- jsonc file type for json - comments in json
+  use("kevinoid/vim-jsonc")
+
+  -- Dashboard
+  use {
+    'goolord/alpha-nvim',
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+  }
+  -- Trouble - show problems in your code
+    use({
+      "folke/trouble.nvim",
+      requires = "kyazdani42/nvim-web-devicons",
+      config = function()
+        require("trouble").setup({})
+      end,
+    })
+
+  -- icons in completion
+  use("onsails/lspkind-nvim")
+
+  -- Formatting
+  use("mhartington/formatter.nvim")
+
+  -- sessions
+    use({
+      "rmagatti/auto-session",
+      config = function()
+        require("auto-session").setup({
+          log_level = "info",
+          auto_session_suppress_dirs = { "~/", "~/Workspace/." },
+        })
+      end,
+    })
+
+    use({
+      "rmagatti/session-lens",
+      config = function()
+        require("session-lens").setup({--[[your custom config--]]
+        })
+      end,
+    })
+
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP

@@ -40,7 +40,35 @@ vim.opt.signcolumn = "yes"                      -- always show the sign column, 
 vim.opt.wrap = false                            -- display lines as one long line
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
-vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
+
+vim.opt.guifont = "JetBrains Mono:h17"               -- the font used in graphical neovim applications
+-- vim.o.guifontsize = 13
+-- spelling
+vim.opt.spelllang = "en_gb"
+vim.opt.mousemodel = "popup"
+-- timeout for whichkey
+vim.opt.timeoutlen = 500
+
+-- Neovide settings
+-- vim.o.guifont = "Victor Mono Nerd Font:h11"
+-- vim.opt.guifontsize = 11
+vim.g.neovide_transparency = 0.6
+vim.g.neovide_fullscreen = true
+
+-- Give me some fenced codeblock goodness
+vim.g.markdown_fenced_languages = {
+	"html",
+	"javascript",
+	"javascriptreact",
+	"typescript",
+	"json",
+	"css",
+	"scss",
+	"lua",
+	"vim",
+	"bash",
+	"ts=typescript",
+}
 
 vim.opt.shortmess:append "c"
 

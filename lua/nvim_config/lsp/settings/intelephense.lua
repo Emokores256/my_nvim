@@ -17,22 +17,22 @@ return {
   },
   docs = {
       default_config = {
-      root_dir = [[root_pattern("composer.json", ".git")]],
-      init_options = [[{
-        storagePath = Optional absolute path to storage dir. Defaults to os.tmpdir().
-        globalStoragePath = Optional absolute path to a global storage dir. Defaults to os.homedir().
-        licenceKey = Optional licence key or absolute path to a text file containing the licence key.
-        clearCache = Optional flag to clear server state. State can also be cleared by deleting {storagePath}/intelephense
+      root_dir = root,
+      init_options = {
+        -- storagePath = Optional absolute path to storage dir. Defaults to os.tmpdir().
+        -- globalStoragePath = Optional absolute path to a global storage dir. Defaults to os.homedir().
+        licenceKey = "~/intelephense/license.txt",
+        -- clearCache = Optional flag to clear server state. State can also be cleared by deleting {storagePath}/intelephense
         -- See https://github.com/bmewburn/intelephense-docs/blob/master/installation.md#initialisation-options
-      }]],
-      settings = [[{
+      },
+      settings = {
         intelephense = {
           files = {
-            maxSize = 1000000;
+            maxSize = 10000000;
           };
         };
         -- See https://github.com/bmewburn/intelephense-docs
-      }]],
+      },
     },
   },
 }
