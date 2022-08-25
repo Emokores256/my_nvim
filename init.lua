@@ -18,3 +18,4 @@ require "nvim_config.dashboard"
 require "nvim_config.matchtag"
 require "nvim_config.formatter"
 require "nvim_config.lspkind"
+require "nvim_config.material" -- for material theme
