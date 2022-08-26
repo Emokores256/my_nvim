@@ -7,11 +7,51 @@ configs.setup {
     enable = true, -- false will disable the whole extension
     disable = { "" }, -- list of language that will be disabled
     additional_vim_regex_highlighting = true,
-
   },
   autopairs = {
     enable = true
   },
+  autotag = {
+    enable = true,
+    filetypes = { 
+    	'html', 
+    	'javascript', 
+    	'typescript', 
+    	'javascriptreact', 
+    	'typescriptreact', 
+    	'svelte', 
+    	'vue', 
+    	'tsx', 
+    	'jsx', 
+    	'rescript',
+    	'xml',
+    	'php',
+    	'markdown',
+    	'glimmer',
+    	'handlebars',
+    	'hbs' 
+    },
+  },
+  skip_tags = {
+	  	'area', 
+	  	'base', 
+	  	'br', 
+	  	'col', 
+	  	'command', 
+	  	'embed', 
+	  	'hr', 
+	  	'img', 
+	  	'slot',
+	  	'input', 
+	  	'keygen', 
+	  	'link', 
+	  	'meta', 
+	  	'param', 
+	  	'source', 
+	  	'track', 
+	  	'wbr',
+	  	'menuitem'
+	},
   indent = { enable = true, disable = { "yaml" } },
   rainbow = {
     enable = true,
