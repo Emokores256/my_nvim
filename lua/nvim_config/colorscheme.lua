@@ -1,5 +1,5 @@
-local colorscheme = "material"
-local material_style = "darker"
+local colorscheme = "darcula-solid"
+
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 
