@@ -14,7 +14,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
   print "Installing packer close and reopen Neovim..."
   vim.cmd [[packadd packer.nvim]]
 end
-
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
   augroup packer_user_config
@@ -62,9 +61,13 @@ return packer.startup(function(use)
   use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
 
   -- Color schemes
-  --use "lunarvim/colorschemes"
+  use "lunarvim/colorschemes"
   use "lunarvim/darkplus.nvim"
+  use "lunarvim/onedarker.nvim"
   use "marko-cerovac/material.nvim"
+  use 'folke/lsp-colors.nvim'
+  use 'Th3Whit3Wolf/one-nvim'
+  use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -97,7 +100,7 @@ return packer.startup(function(use)
         require("todo-comments").setup({})
       end,
     })
-    
+
     -- hover effect for function definitions
     use ({'lewis6991/hover.nvim', config = function()
     	require('hover').setup{
@@ -180,7 +183,7 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use "p00f/nvim-ts-rainbow"
+-- use "p00f/nvim-ts-rainbow"
   use "nvim-treesitter/playground"
 
   -- Comments
