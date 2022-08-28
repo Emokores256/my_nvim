@@ -97,6 +97,24 @@ return packer.startup(function(use)
         require("todo-comments").setup({})
       end,
     })
+    
+    -- hover effect for function definitions
+    use ({'lewis6991/hover.nvim', config = function()
+    	require('hover').setup{
+      		init = function()
+		    	-- Require providers
+		    	require('hover.providers.lsp')
+		    	require('hover.providers.gh')
+		    	require('hover.providers.man')
+		    	require('hover.providers.dictionary')
+      		end,
+      preview_opts = {
+        border = nil
+      },
+      title = true
+    }
+    
+  end})
 
   -- jsonc file type for json - comments in json
   use("kevinoid/vim-jsonc")
