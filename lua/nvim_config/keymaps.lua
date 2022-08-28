@@ -77,3 +77,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Formatting using Null-ls
 keymap("n", "<leader>f", ":Format<cr>", opts)
+
+-- Setup keymaps
+vim.keymap.set("v", "K", require("hover").hover, { desc="hover.nvim" })
+vim.keymap.set("v", "gK", require("hover").hover_select, { desc="hover.nvim (select)" })
