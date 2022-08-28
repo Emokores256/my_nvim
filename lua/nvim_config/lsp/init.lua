@@ -13,7 +13,7 @@ local on_attach = function(client, bufnr)
 	local opts = { noremap = true, silent = true }
 
 	buf_set_keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>", opts) --> jumps to the definition of the symbol under the cursor
-	buf_set_keymap("n", "<leader>lh", ":lua vim.lsp.buf.hover()<CR>", opts) --> information about the symbol under the cursos in a floating window
+	buf_set_keymap("n", "i", ":lua vim.lsp.buf.hover()<CR>", opts) --> information about the symbol under the cursor in a floating window
 	buf_set_keymap("n", "gi", ":lua vim.lsp.buf.implementation()<CR>", opts) --> lists all the implementations for the symbol under the cursor in the quickfix window
 	buf_set_keymap("n", "<leader>rn", ":lua vim.lsp.util.rename()<CR>", opts) --> renaname old_fname to new_fname
 	buf_set_keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts) --> selects a code action available at the current cursor position
@@ -33,8 +33,8 @@ local servers = {
 	"sumneko_lua",
 	"tsserver",
 	"intelephense",
-  "tailwindcss",
-  "html",
+  	"tailwindcss",
+  	"html",
 }
 
 ---@diagnostic disable-next-line: undefined-global
@@ -77,6 +77,40 @@ lsp_installer.on_server_ready(function(server)
       }
     }
   end
-
+  
+  if server.name == "tsserver" then
+  	default_opts = {
+  		cmd = { 'typescript-languge-server', '--stdio' },
+	  	init_options = { hostInfo = 'neovim' },
+	  	filetypes = {
+		  'javascript',
+		  'javascriptreact',
+		  'javascript.jsx',
+		  'typescript',
+		  'typescriptreact',
+		  'typescript.tsx',
+		},
+  	}
+  end
+  
+  if server.name == "intelephense" then
+  	default_opts = {
+  		cmd = { 'intelephense', '--stdio' },
+  		filetypes = { 'php', 'phtml' },
+  		init_options = {
+		  globalStoragePath = "/usr/bin/intelephense",
+		  licenseKey = "004LVPGXKWM3TWG"
+		},
+		settings = {
+		  intelephense = {
+		    files = {
+		      maxSize = 10000000;
+		    };
+		  };
+		    -- See https://github.com/bmewburn/intelephense-docs
+		},
+  	}
+  end
+  
 	server:setup(default_opts)
 end)
