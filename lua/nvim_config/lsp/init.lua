@@ -78,39 +78,6 @@ lsp_installer.on_server_ready(function(server)
     }
   end
   
-  if server.name == "tsserver" then
-  	default_opts = {
-  		cmd = { 'typescript-languge-server', '--stdio' },
-	  	init_options = { hostInfo = 'neovim' },
-	  	filetypes = {
-		  'javascript',
-		  'javascriptreact',
-		  'javascript.jsx',
-		  'typescript',
-		  'typescriptreact',
-		  'typescript.tsx',
-		},
-  	}
-  end
-  
-  if server.name == "intelephense" then
-  	default_opts = {
-  		cmd = { 'intelephense', '--stdio' },
-  		filetypes = { 'php', 'phtml' },
-  		init_options = {
-		  globalStoragePath = "/usr/bin/intelephense",
-		  licenseKey = "004LVPGXKWM3TWG"
-		},
-		settings = {
-		  intelephense = {
-		    files = {
-		      maxSize = 10000000;
-		    };
-		  };
-		    -- See https://github.com/bmewburn/intelephense-docs
-		},
-  	}
-  end
   
 	server:setup(default_opts)
 end)
