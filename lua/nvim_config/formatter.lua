@@ -115,7 +115,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 		"*.go",
 		"*.rs",
 		"*.astro",
-    "*.php",
+    	"*.php",
 	},
 	command = "FormatWrite",
 })
