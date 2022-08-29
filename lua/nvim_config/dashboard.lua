@@ -1,7 +1,6 @@
-local alpha = require("alpha")
-local dashboard = require("alpha.themes.dashboard")
-
+local db = require('dashboard')
 -- Set header
+
 --[[ dashboard.section.header.val = { ]]
 --[[   "                                                     ", ]]
 --[[   "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ", ]]
@@ -13,7 +12,10 @@ local dashboard = require("alpha.themes.dashboard")
 --[[   "                                                     ", ]]
 --[[ } ]]
 
-dashboard.section.val = {
+db.default_executive = 'telescope'
+
+db.custom_header = {
+
    '        ▄▄▄▄▄███████████████████▄▄▄▄▄     ',
    '      ▄██████████▀▀▀▀▀▀▀▀▀▀██████▀████▄   ',
    '     █▀████████▄             ▀▀████ ▀██▄  ',
@@ -29,21 +31,48 @@ dashboard.section.val = {
 }
 
 
-
 -- Set menu
-dashboard.section.buttons.val = {
-  dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
-  dashboard.button("f", "  > Find file", ":Telescope find_files<CR>"),
-  dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
-  -- dashboard.button("s", "  > Settings", ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
-  dashboard.button("s", "  > Sessions", ":Telescope session-lens search_session<CR>"),
-  dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
+db.custom_center = {
+  {
+    icon = "  ",
+    desc = "New file                               ",
+    action = "enew"
+  },
+  {
+    icon = "  ",
+    desc = "Search text                            ",
+    action = "Telescope live_grep"
+  },
+  {
+    icon = "  ",
+    desc = "Find file                              ",
+    action = "Telescope find_files, --hidden, --files"
+  },
+  {
+    icon = "  ",
+    desc = "Recent files                           ",
+    action = "Telescope Oldfiles"
+  },
+  {
+    icon = "舘 ",
+    desc = "Configure dashboard                    ",
+    action = "edit ~/.config/nvim/lua/nvim_config/dashboard.lua",
+  },
+  {
+    icon = "  ",
+    desc = "Config                                 ",
+    action = "edit ~/.config/nvim/lua/nvim_config/base.lua",
+  },
+  {
+    icon = "  ",
+    desc = "Quit                                   ",
+    action = "qa",
+    -- shortcut = "qa"
+  },
 }
 
--- Send config to alpha
-alpha.setup(dashboard.opts)
+db.custom_footer = { 'Do one thing, do it well! - UNIX Philosophy' }
 
--- Disable folding on alpha buffer
-vim.cmd([[
-    autocmd FileType alpha setlocal nofoldenable
-]])
+db.header_pad = 3
+db.center_pad = 2
+db.footer_pad = 5
