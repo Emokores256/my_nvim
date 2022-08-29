@@ -126,12 +126,7 @@ return packer.startup(function(use)
   use("kevinoid/vim-jsonc")
 
   -- Dashboard
-  use {
-    'goolord/alpha-nvim',
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.dashboard'.config)
-    end
-  }
+  use {'glepnir/dashboard-nvim'}
 
   -- WhichKey
   use("folke/which-key.nvim")
@@ -187,7 +182,7 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
 -- use "p00f/nvim-ts-rainbow"
-  use "nvim-treesitter/playground"
+-- use "nvim-treesitter/playground"
 
   -- Comments
   use "JoosepAlviste/nvim-ts-context-commentstring"
