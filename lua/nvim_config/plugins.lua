@@ -59,6 +59,9 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
+  use {'dsznajder/vscode-es7-javascript-react-snippets',
+    run = 'npm install --frozen-lockfile'
+  }
 
   -- Color schemes
   use "lunarvim/colorschemes"
