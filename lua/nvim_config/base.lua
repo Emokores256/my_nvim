@@ -71,6 +71,7 @@ vim.g.markdown_fenced_languages = {
 	"ts=typescript",
 }
 
+
 vim.opt.shortmess:append "c"
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
