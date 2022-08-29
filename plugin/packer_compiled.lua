@@ -79,12 +79,6 @@ _G.packer_plugins = {
     path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["alpha-nvim"] = {
-    config = { "\27LJ\2\2a\0\0\3\0\5\0\n6\0\0\0'\1\1\0B\0\2\0029\0\2\0006\1\0\0'\2\3\0B\1\2\0029\1\4\1B\0\2\1K\0\1\0\vconfig\27alpha.themes.dashboard\nsetup\nalpha\frequire\0" },
-    loaded = true,
-    path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/alpha-nvim",
-    url = "https://github.com/goolord/alpha-nvim"
-  },
   ["auto-session"] = {
     config = { "\27LJ\2\2ˆ\1\0\0\3\0\6\0\t6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0005\2\4\0=\2\5\1B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\3\0\0\a~/\18~/Workspace/.\1\0\1\14log_level\tinfo\nsetup\17auto-session\frequire\0" },
     loaded = true,
@@ -140,6 +134,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
     url = "https://github.com/lunarvim/darkplus.nvim"
+  },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
   },
   ["formatter.nvim"] = {
     loaded = true,
@@ -268,11 +267,6 @@ _G.packer_plugins = {
     path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  playground = {
-    loaded = true,
-    path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/playground",
-    url = "https://github.com/nvim-treesitter/playground"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -376,10 +370,6 @@ time([[Config for hover.nvim]], false)
 time([[Config for hop]], true)
 try_loadstring("\27LJ\2\2U\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0", "config", "hop")
 time([[Config for hop]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-try_loadstring("\27LJ\2\2a\0\0\3\0\5\0\n6\0\0\0'\1\1\0B\0\2\0029\0\2\0006\1\0\0'\2\3\0B\1\2\0029\1\4\1B\0\2\1K\0\1\0\vconfig\27alpha.themes.dashboard\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
-time([[Config for alpha-nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
