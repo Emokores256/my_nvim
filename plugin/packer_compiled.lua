@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["arctic.nvim"] = {
+    loaded = true,
+    path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/arctic.nvim",
+    url = "https://github.com/rockyzhang24/arctic.nvim"
+  },
   ["auto-session"] = {
     config = { "\27LJ\2\2ˆ\1\0\0\3\0\6\0\t6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0005\2\4\0=\2\5\1B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\3\0\0\a~/\18~/Workspace/.\1\0\1\14log_level\tinfo\nsetup\17auto-session\frequire\0" },
     loaded = true,
@@ -267,6 +272,11 @@ _G.packer_plugins = {
     path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/onedarker.nvim",
     url = "https://github.com/lunarvim/onedarker.nvim"
   },
+  ["onedarkpro.nvim"] = {
+    loaded = true,
+    path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
+    url = "https://github.com/olimorris/onedarkpro.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -355,10 +365,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\0029\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
--- Config for: auto-session
-time([[Config for auto-session]], true)
-try_loadstring("\27LJ\2\2ˆ\1\0\0\3\0\6\0\t6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0005\2\4\0=\2\5\1B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\3\0\0\a~/\18~/Workspace/.\1\0\1\14log_level\tinfo\nsetup\17auto-session\frequire\0", "config", "auto-session")
-time([[Config for auto-session]], false)
+-- Config for: hover.nvim
+time([[Config for hover.nvim]], true)
+try_loadstring("\27LJ\2\2™\1\0\0\2\0\5\0\r6\0\0\0'\1\1\0B\0\2\0016\0\0\0'\1\2\0B\0\2\0016\0\0\0'\1\3\0B\0\2\0016\0\0\0'\1\4\0B\0\2\1K\0\1\0\31hover.providers.dictionary\24hover.providers.man\23hover.providers.gh\24hover.providers.lsp\frequireg\1\0\3\0\b\0\v6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0003\2\3\0=\2\5\0015\2\6\0=\2\a\1B\0\2\1K\0\1\0\17preview_opts\1\0\0\tinit\1\0\1\ntitle\2\0\nsetup\nhover\frequire\0", "config", "hover.nvim")
+time([[Config for hover.nvim]], false)
 -- Config for: todo-comments.nvim
 time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\2?\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
@@ -367,10 +377,10 @@ time([[Config for todo-comments.nvim]], false)
 time([[Config for session-lens]], true)
 try_loadstring("\27LJ\2\2>\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\17session-lens\frequire\0", "config", "session-lens")
 time([[Config for session-lens]], false)
--- Config for: hover.nvim
-time([[Config for hover.nvim]], true)
-try_loadstring("\27LJ\2\2™\1\0\0\2\0\5\0\r6\0\0\0'\1\1\0B\0\2\0016\0\0\0'\1\2\0B\0\2\0016\0\0\0'\1\3\0B\0\2\0016\0\0\0'\1\4\0B\0\2\1K\0\1\0\31hover.providers.dictionary\24hover.providers.man\23hover.providers.gh\24hover.providers.lsp\frequireg\1\0\3\0\b\0\v6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0003\2\3\0=\2\5\0015\2\6\0=\2\a\1B\0\2\1K\0\1\0\17preview_opts\1\0\0\tinit\1\0\1\ntitle\2\0\nsetup\nhover\frequire\0", "config", "hover.nvim")
-time([[Config for hover.nvim]], false)
+-- Config for: auto-session
+time([[Config for auto-session]], true)
+try_loadstring("\27LJ\2\2ˆ\1\0\0\3\0\6\0\t6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0005\2\4\0=\2\5\1B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\3\0\0\a~/\18~/Workspace/.\1\0\1\14log_level\tinfo\nsetup\17auto-session\frequire\0", "config", "auto-session")
+time([[Config for auto-session]], false)
 -- Config for: hop
 time([[Config for hop]], true)
 try_loadstring("\27LJ\2\2U\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0", "config", "hop")
