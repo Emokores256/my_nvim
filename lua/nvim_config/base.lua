@@ -42,6 +42,9 @@ vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.g.material_style = "darker"                 -- for material theme style
 
+vim.o.background = dark
+
+
 -- vim.opt.guifont = "Fira Code:h17"               -- the font used in graphical neovim applications
 -- vim.o.guifontsize = 13
 -- spelling
