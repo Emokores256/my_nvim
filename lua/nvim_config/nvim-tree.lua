@@ -56,7 +56,7 @@ nvim_tree.setup {
       view = {
         adaptive_size = false,
         centralize_selection = false,
-        width = 30,
+        width = 50,
         height = 30,
         hide_root_folder = false,
         side = "left",
@@ -76,7 +76,7 @@ nvim_tree.setup {
           open_win_config = {
             relative = "editor",
             border = "rounded",
-            width = 30,
+            width = 50,
             height = 30,
             row = 1,
             col = 1,
@@ -166,7 +166,7 @@ nvim_tree.setup {
       },
       filters = {
         dotfiles = false,
-        custom = {},
+        custom = {"^.env$"},
         exclude = {},
       },
       filesystem_watchers = {
