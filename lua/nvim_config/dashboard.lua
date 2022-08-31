@@ -12,7 +12,7 @@ local db = require('dashboard')
 --[[   "                                                     ", ]]
 --[[ } ]]
 
-db.default_executive = 'telescope'
+-- vim.g.dashboard_default_executive = 'telescope'
 
 db.custom_header = {
 
@@ -45,18 +45,23 @@ db.custom_center = {
   },
   {
     icon = "  ",
-    desc = "Find file                              ",
-    action = "Telescope find_files, --hidden, --files"
+    desc = "Find files                             ",
+    action = "Telescope find_files"
   },
   {
     icon = "  ",
     desc = "Recent files                           ",
-    action = "Telescope Oldfiles"
+    action = "Telescope oldfiles"
   },
   {
     icon = "舘 ",
     desc = "Configure dashboard                    ",
     action = "edit ~/.config/nvim/lua/nvim_config/dashboard.lua",
+  },
+  {
+    icon = "  ",
+    desc = "Configure plugins                      ",
+    action = "edit ~/.config/nvim/lua/nvim_config/plugins.lua"
   },
   {
     icon = "  ",
@@ -71,7 +76,7 @@ db.custom_center = {
   },
 }
 
-db.custom_footer = { 'Do one thing, do it well! - UNIX Philosophy' }
+db.custom_footer = { '"First program, then write the code." - Steven E.' }
 
 db.header_pad = 3
 db.center_pad = 2
