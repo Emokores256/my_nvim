@@ -21,7 +21,7 @@ toggleterm.setup({
 		winblend = 0,
 		highlights = {
 			border = "Normal",
-			background = "Normal",
+			background = "Dark",
 		},
 	},
 })
