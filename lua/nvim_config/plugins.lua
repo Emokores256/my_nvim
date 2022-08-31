@@ -71,6 +71,8 @@ return packer.startup(function(use)
   use 'folke/lsp-colors.nvim'
   use 'Th3Whit3Wolf/one-nvim'
   use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
+  use {"rockyzhang24/arctic.nvim", requires = {"rktjmp/lush.nvim"}}
+  use "olimorris/onedarkpro.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
