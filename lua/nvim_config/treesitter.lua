@@ -29,7 +29,8 @@ configs.setup {
     	'markdown',
     	'glimmer',
     	'handlebars',
-    	'hbs'
+    	'hbs',
+      'css'
     },
   },
   skip_tags = {
