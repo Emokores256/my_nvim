@@ -40,22 +40,26 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  use {'tpope/vim-dispatch', opt = true, cmd = {'Dispatch', 'Make', 'Focus', 'Start'} }
-  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use("windwp/nvim-ts-autotag") -- auto close and rename tags
-  use("windwp/nvim-spectre") -- Spectre for find and replace
-  use "numToStr/Comment.nvim" -- Easily comment out stuff
+  use "wbthomason/packer.nvim"                                -- Have packer manage itself
+  use "nvim-lua/popup.nvim"                                   -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim"                                 -- Useful lua functions used ny lots of plugins
+  use {'tpope/vim-dispatch',
+    opt = true,
+    cmd = {'Dispatch', 'Make', 'Focus', 'Start'} }
+  use "windwp/nvim-autopairs"                                 -- Autopairs, integrates with both cmp and treesitter
+  use("windwp/nvim-ts-autotag")                               -- auto close and rename tags
+  use("windwp/nvim-spectre")                                  -- Spectre for find and replace
+  use "tpope/vim-commentary"                                  -- Easily comment out stuff
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+      'kyazdani42/nvim-web-devicons',                         -- for file icons
     },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    tag = 'nightly'                                           -- optional, updated every week. (see issue #1193)
   }
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim',
+    tag = "v2.*",
+    requires = 'kyazdani42/nvim-web-devicons'}
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
@@ -70,22 +74,28 @@ return packer.startup(function(use)
   use "marko-cerovac/material.nvim"
   use 'folke/lsp-colors.nvim'
   use 'Th3Whit3Wolf/one-nvim'
-  use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
-  use {"rockyzhang24/arctic.nvim", requires = {"rktjmp/lush.nvim"}}
+  use {
+    "briones-gabriel/darcula-solid.nvim",
+    requires = "rktjmp/lush.nvim"
+  }
+  use {
+    "rockyzhang24/arctic.nvim",
+    requires = {"rktjmp/lush.nvim"}
+  }
   use "olimorris/onedarkpro.nvim"
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/nvim-cmp"                                      -- The completion plugin
+  use "hrsh7th/cmp-buffer"                                    -- buffer completions
+  use "hrsh7th/cmp-path"                                      -- path completions
+  use "hrsh7th/cmp-cmdline"                                   -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip"                              -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
 
   -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  use "L3MON4D3/LuaSnip"                                      --snippet engine
+  use "rafamadriz/friendly-snippets"                          -- a bunch of snippets to use
 
   -- hightlight matching tag in html,jsx etc.
   use("leafOfTree/vim-matchtag")
@@ -93,7 +103,9 @@ return packer.startup(function(use)
       "phaazon/hop.nvim",
       as = "hop",
       config = function()
-        require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+        require("hop").setup({
+        keys = "etovxqpdygfblzhckisuran"
+      })
       end,
     })
 
@@ -117,7 +129,8 @@ return packer.startup(function(use)
 		    	require('hover.providers.dictionary')
       		end,
       preview_opts = {
-        border = nil
+        -- border = nil
+        border = 'single'
       },
       title = true
     }
