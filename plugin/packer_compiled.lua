@@ -69,11 +69,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["Comment.nvim"] = {
-    loaded = true,
-    path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/Comment.nvim",
-    url = "https://github.com/numToStr/Comment.nvim"
-  },
   LuaSnip = {
     loaded = true,
     path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -167,7 +162,7 @@ _G.packer_plugins = {
     url = "https://github.com/phaazon/hop.nvim"
   },
   ["hover.nvim"] = {
-    config = { "\27LJ\2\2™\1\0\0\2\0\5\0\r6\0\0\0'\1\1\0B\0\2\0016\0\0\0'\1\2\0B\0\2\0016\0\0\0'\1\3\0B\0\2\0016\0\0\0'\1\4\0B\0\2\1K\0\1\0\31hover.providers.dictionary\24hover.providers.man\23hover.providers.gh\24hover.providers.lsp\frequireg\1\0\3\0\b\0\v6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0003\2\3\0=\2\5\0015\2\6\0=\2\a\1B\0\2\1K\0\1\0\17preview_opts\1\0\0\tinit\1\0\1\ntitle\2\0\nsetup\nhover\frequire\0" },
+    config = { "\27LJ\2\2™\1\0\0\2\0\5\0\r6\0\0\0'\1\1\0B\0\2\0016\0\0\0'\1\2\0B\0\2\0016\0\0\0'\1\3\0B\0\2\0016\0\0\0'\1\4\0B\0\2\1K\0\1\0\31hover.providers.dictionary\24hover.providers.man\23hover.providers.gh\24hover.providers.lsp\frequireu\1\0\3\0\b\0\v6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0003\2\3\0=\2\5\0015\2\6\0=\2\a\1B\0\2\1K\0\1\0\17preview_opts\1\0\1\vborder\vsingle\tinit\1\0\1\ntitle\2\0\nsetup\nhover\frequire\0" },
     loaded = true,
     path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/hover.nvim",
     url = "https://github.com/lewis6991/hover.nvim"
@@ -330,6 +325,11 @@ _G.packer_plugins = {
     path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/blackhawk/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
+  },
   ["vim-dispatch"] = {
     commands = { "Dispatch", "Make", "Focus", "Start" },
     loaded = false,
@@ -367,7 +367,7 @@ try_loadstring("\27LJ\2\0029\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\
 time([[Config for trouble.nvim]], false)
 -- Config for: hover.nvim
 time([[Config for hover.nvim]], true)
-try_loadstring("\27LJ\2\2™\1\0\0\2\0\5\0\r6\0\0\0'\1\1\0B\0\2\0016\0\0\0'\1\2\0B\0\2\0016\0\0\0'\1\3\0B\0\2\0016\0\0\0'\1\4\0B\0\2\1K\0\1\0\31hover.providers.dictionary\24hover.providers.man\23hover.providers.gh\24hover.providers.lsp\frequireg\1\0\3\0\b\0\v6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0003\2\3\0=\2\5\0015\2\6\0=\2\a\1B\0\2\1K\0\1\0\17preview_opts\1\0\0\tinit\1\0\1\ntitle\2\0\nsetup\nhover\frequire\0", "config", "hover.nvim")
+try_loadstring("\27LJ\2\2™\1\0\0\2\0\5\0\r6\0\0\0'\1\1\0B\0\2\0016\0\0\0'\1\2\0B\0\2\0016\0\0\0'\1\3\0B\0\2\0016\0\0\0'\1\4\0B\0\2\1K\0\1\0\31hover.providers.dictionary\24hover.providers.man\23hover.providers.gh\24hover.providers.lsp\frequireu\1\0\3\0\b\0\v6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0003\2\3\0=\2\5\0015\2\6\0=\2\a\1B\0\2\1K\0\1\0\17preview_opts\1\0\1\vborder\vsingle\tinit\1\0\1\ntitle\2\0\nsetup\nhover\frequire\0", "config", "hover.nvim")
 time([[Config for hover.nvim]], false)
 -- Config for: todo-comments.nvim
 time([[Config for todo-comments.nvim]], true)
