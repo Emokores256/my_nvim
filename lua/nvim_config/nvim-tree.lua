@@ -166,7 +166,7 @@ nvim_tree.setup {
       },
       filters = {
         dotfiles = false,
-        custom = {"^.env$"},
+        custom = {".env"},
         exclude = {},
       },
       filesystem_watchers = {
